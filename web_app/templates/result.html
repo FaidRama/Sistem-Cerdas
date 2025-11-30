@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Prediksi</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 20px auto; text-align: center; }
+        .result-box { background-color: #e8f5e9; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .plot-box { margin-top: 20px; }
+        ul { text-align: left; background: #f9f9f9; padding: 20px; border-radius: 5px; }
+        a { text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Hasil Analisis</h1>
+    
+    <div class="result-box">
+        <h3>Prediksi Cuaca:</h3>
+        <h1 style="color: #2e7d32; text-transform: uppercase;">{{ prediction }}</h1>
+        <p>Input: {{ input_data }}</p>
+    </div>
+
+    <div class="plot-box">
+        <h3>Visualisasi PCA (Posisi Data Kamu):</h3>
+        <img src="data:image/png;base64,{{ plot_url }}" style="max-width:100%; height:auto;">
+    </div>
+
+    <div style="margin-top: 30px;">
+        <h3>5 Data Cuaca Terdekat (Neighbors):</h3>
+        <ul>
+            {% for neighbor in neighbors %}
+                <li>{{ neighbor }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <br>
+    <a href="/">⬅️ Coba Lagi</a>
+</body>
+</html>

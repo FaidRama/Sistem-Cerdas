@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Cuaca KNN</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+        input { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background-color: #4CAF50; color: white; padding: 14px 20px; border: none; cursor: pointer; width: 100%; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h2>🌤️ Aplikasi Prediksi Cuaca (KNN Manual)</h2>
+    <form action="/predict" method="post">
+        <label>Suhu (°C):</label>
+        <input type="number" step="0.01" name="temp" required placeholder="Contoh: 26.5">
+        
+        <label>Kelembaban (%):</label>
+        <input type="number" step="0.01" name="hum" required placeholder="Contoh: 80">
+        
+        <label>Kecepatan Angin (km/h):</label>
+        <input type="number" step="0.01" name="wind" required placeholder="Contoh: 12">
+        
+        <label>Tekanan Udara (kPa):</label>
+        <input type="number" step="0.01" name="press" required placeholder="Contoh: 1010">
+        
+        <button type="submit">Prediksi Sekarang</button>
+    </form>
+</body>
+</html>
